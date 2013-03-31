@@ -1,0 +1,6 @@
+To Do List
+
+Available commands:
+list - Display the tasks in your To Do list.
+add - Add a new item in quotes, then a date in the format YYYY-MM-DD. If you don't specify a due date, tomorrow will be the default.
+
