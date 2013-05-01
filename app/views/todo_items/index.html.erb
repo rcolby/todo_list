@@ -28,27 +28,13 @@
 
 <h2>Pending Tasks</h2>
 
-  <ol>
-  <% @todo_items.each do |todo_item| %>
-    <li>
-      <span><%= todo_item.name %></span>
-      <span><%= todo_item.due_at %></span>
-      <span><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-    </li>
-<% end %>
-</ol>
+<%= render :partial => 'list', :locals => {:list => @todo_items, :list_name => "pending"} %>
 
 <h2>Completed Tasks</h2>
 
-  <ol>
-  <% @completed_items.each do |completed_item| %>
-    <li>
-      <span><%= completed_item.name %></span>
-      <span><%= completed_item.due_at %></span>
-      <span><%= link_to 'Destroy', completed_item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-    </li>
-<% end %>
-</ol>
+<%= render :partial => 'list', :locals => {:list => @completed_items, :list_name => "completed"} %>
+
+
 
 
 

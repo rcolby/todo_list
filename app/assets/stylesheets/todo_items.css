@@ -1,0 +1,7 @@
+.item_name:after {
+  content: " • ";
+}
+
+.item_due_at:before {
+  content: "Due: ";
+}
