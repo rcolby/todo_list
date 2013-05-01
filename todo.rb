@@ -6,7 +6,7 @@ class Task
   
   include Comparable
 
-	attr_accessor :item, :complete, :due_date
+  attr_accessor :item, :complete, :due_date
   attr_reader :overdue
 
   def initialize (item, due_date = Date.today.next_day)
