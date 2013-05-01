@@ -1,9 +1,10 @@
 class TodoItemsController < ApplicationController
 
-  # GET /
-  # GET /index.json
+  # GET /todo_items
+  # GET /todo_items.json
   def index
-    @todo_items = TodoItem.all
+    @todo_items = TodoItem.where(:completed => false, :deleted => false)
+    @completed_items = TodoItem.where(:completed => true, :deleted => false)
     @todo_item = TodoItem.new
 
     respond_to do |format|
