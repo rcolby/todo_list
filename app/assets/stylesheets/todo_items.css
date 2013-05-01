@@ -1,7 +1,37 @@
+.item_checkbox input {
+  vertical-align: top;
+}
+
 .item_name:after {
-  content: " • ";
+  content: " • "
 }
 
 .item_due_at:before {
-  content: "Due: ";
+  content: "Due "
+}
+
+.item_delete a {
+  position: relative;
+  z-index: 1;
+}
+
+.item_delete a span {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+
+.item_delete a object {
+  position: relative;
+  z-index: -1;
+}
+
+.item_delete img, .item_delete object {
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  font-size: 12px;
 }
