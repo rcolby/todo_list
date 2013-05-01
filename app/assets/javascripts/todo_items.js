@@ -18,9 +18,11 @@ $(document).ready(function(){
       data: {todo_item: item},
       dataType: 'json',
       beforeSend: function(){
+        $('.spinner').fadeIn();
       },
       complete: function() {
         allowSubmit = true;
+        $('.spinner').fadeOut();
       },
       success: function(todo) {
         var list = $('#pending');
